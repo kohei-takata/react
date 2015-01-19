@@ -1,3 +1,4 @@
+var converter = new Showdown.converter();
 var CommentBox = React.createClass({
  render: function() {
   return (
@@ -38,6 +39,7 @@ var Comment = React.createClass({
      {this.props.author}
     </h2>
     {this.props.children}
+    {converter.makeHtml(this.props.children.toString())}
    </div>
   )
  }
