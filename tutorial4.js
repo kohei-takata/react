@@ -1,10 +1,14 @@
+var data = [
+ {author: "Pete Hunt", text: "This is one comment"},
+ {author: "Jordan Walke", text: "This is *another* comment"}
+];
 var converter = new Showdown.converter();
 var CommentBox = React.createClass({
  render: function() {
   return (
    <div className="commentBox">
     <h1>Comments</h1>
-    <CommentList />
+    <CommentList data={this.props.data} />
     <CommentForm />
    </div> 
   );
@@ -47,6 +51,6 @@ var Comment = React.createClass({
 });
 
 React.render(
- <CommentBox />,
+ <CommentBox data={data} />,
  document.getElementById('content2')
 );
