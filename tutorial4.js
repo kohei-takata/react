@@ -57,6 +57,6 @@ var Comment = React.createClass({
 });
 
 React.render(
- <CommentBox data={data} />,
+ <CommentBox url="comments.json" />,
  document.getElementById('content2')
 );
