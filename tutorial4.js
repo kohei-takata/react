@@ -34,9 +34,11 @@ var CommentList = React.createClass({
 var CommentForm = React.createClass({
  render: function() {
   return (
-   <div className="commentForm">   
-    Hello, world! I am a CommentForm
-   </div>
+   <form className="commentForm">
+    <input type="text" placeholder="Your name" />
+    <input type="text" placeholder="Say something..." />
+    <input type="submit" value="Post" />
+   </form>
   );
  }              
 });
@@ -57,6 +59,6 @@ var Comment = React.createClass({
 });
 
 React.render(
- <CommentBox url="comments.json" />,
+ <CommentBox data={data} />,
  document.getElementById('content2')
 );
